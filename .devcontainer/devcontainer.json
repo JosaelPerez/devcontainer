@@ -24,9 +24,6 @@
 			"version": "latest"
 		},
 		"ghcr.io/dhoeric/features/google-cloud-cli:1": {},
-		"ghcr.io/itsmechlark/features/postgresql:1": {
-			"version": "latest"
-		},
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
 			"moby": true,
 			"azureDnsAutoDetection": true,
