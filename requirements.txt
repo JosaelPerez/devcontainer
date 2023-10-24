@@ -18,4 +18,4 @@ nltk
 httpx
 scrapy
 scrapy-splash
-fastapi[all]
+psycopg[binary]
