@@ -9,9 +9,11 @@ RUN apt-get install -y curl gnupg
 RUN curl -fsSL https://pgp.mongodb.com/server-7.0.asc | apt-key add -
 RUN echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | \
 tee /etc/apt/sources.list.d/mongodb-org-7.0.list
-RUN apt-get update
 # Install atlas cli and mongosh
-RUN apt-get install -y mongodb-atlas
+RUN apt-get update && apt-get install -y mongodb-atlas
+
+# Install necessary dependencies for OpenCV which are present in OS but not in containers by default
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
 # Set environment variables, if necessary
 
