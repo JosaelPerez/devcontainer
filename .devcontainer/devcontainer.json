@@ -11,6 +11,15 @@
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
+			"installTools": true,
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"version": "lts",
+			"nvmVersion": "latest"
+		},
 		"ghcr.io/devcontainers/features/git:1": {
 			"ppa": true,
 			"version": "latest"
@@ -19,11 +28,8 @@
 			"installDirectlyFromGitHubRelease": true,
 			"version": "latest"
 		},
-		"ghcr.io/devcontainers/features/python:1": {
-			"installTools": true,
-			"version": "latest"
+		"ghcr.io/dhoeric/features/google-cloud-cli:1": {
 		},
-		"ghcr.io/dhoeric/features/google-cloud-cli:1": {},
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
 			"moby": true,
 			"azureDnsAutoDetection": true,
@@ -33,14 +39,6 @@
 		},
 		"ghcr.io/devcontainers-contrib/features/terraform-asdf:2": {
 			"version": "latest"
-		},
-		"ghcr.io/devcontainers-contrib/features/firebase-cli:2": {
-			"version": "latest"
-		},
-		"ghcr.io/devcontainers/features/node:1": {
-			"nodeGypDependencies": true,
-			"version": "lts",
-			"nvmVersion": "latest"
 		},
 	},
 
@@ -54,25 +52,23 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"enkia.tokyo-night",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"christian-kohler.path-intellisense",
 				"ms-python.python",
 				"ms-python.vscode-pylance",
 				"ms-toolsai.jupyter",
+				"ms-python.black-formatter",
 				"njpwerner.autodocstring",
+				"yzhang.markdown-all-in-one",
 				"eamodio.gitlens",
+				"GitHub.vscode-pull-request-github",
+				"github.vscode-github-actions",
 				"GitHub.copilot",
 				"GitHub.copilot-chat",
-				"googlecloudtools.cloudcode",
 				"ms-azuretools.vscode-docker",
 				"hashicorp.terraform",
-				"VisualStudioExptTeam.vscodeintellicode",
-				"MS-vsliveshare.vsliveshare",
-				"ritwickdey.LiveServer",
-				"yzhang.markdown-all-in-one",
-				"mechatroner.rainbow-csv",
-				"christian-kohler.path-intellisense",
-				"akamud.vscode-theme-onedark",
-				"alefragnani.project-manager",
-				"dbaeumer.vscode-eslint"
+				"googlecloudtools.cloudcode",
 			]
 		}
 	},
